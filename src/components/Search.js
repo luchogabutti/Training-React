@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 
 const Search = (props) => {
@@ -19,15 +22,32 @@ const Search = (props) => {
   }
 
   return (
-      <form className="search">
-        <input
-          value={searchValue}
-          onChange={handleSearchInputChanges}
-          type="text"
-        />
-        <input onClick={callSearchFunction} type="submit" value="SEARCH" />
-      </form>
-    );
+    <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <TextField
+        id="outlined-name"
+        className="search"
+        label="Name"
+        value={searchValue}
+        onChange={handleSearchInputChanges}
+        type= "text"
+      />
+      <Button
+        onClick={callSearchFunction}
+        type="submit" value="SEARCH"
+        variant="outlined"
+        sx={{
+          '& > :not(style)': { m: 1, width: '25ch' },
+        }}> Search
+      </Button>
+    </Box>
+  );
 }
 
 export default Search;
