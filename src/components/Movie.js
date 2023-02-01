@@ -11,7 +11,7 @@ const Movie = ({ movie }) => {
   const poster =
     movie.Poster === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : movie.Poster;
   return (
-    <Box className="movie" sx={{ width: 500, height: 450, overflowY: 'scroll' }}>
+    <Box className="movie">
       <ImageList variant="masonry" cols={3} gap={8}></ImageList>
       <h2>{movie.Title}</h2>
       <ImageListItem key={poster}>

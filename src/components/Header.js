@@ -16,13 +16,10 @@ const Header = (props) => {
         color="inherit"
         aria-label="menu"
         sx={{ mr: 2 }}
-      >
-        <MenuIcon />
-      </IconButton>
-      <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
+      />
+      <Typography variant="h4" sx={{ flexGrow: 1 }}>
         Lucho TV
       </Typography>
-      <Button color="inherit">Iniciar Sesion</Button>
     </Toolbar>
   </AppBar>
   );
